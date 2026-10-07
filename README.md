@@ -32,3 +32,7 @@ La arquitectura conceptual V1 está ampliamente definida. El desarrollo funciona
 ## Contribuir
 
 [Guía de contribución](CONTRIBUTING.md). La validación automática revisa documentos locales; los cambios de producto y datos privados se coordinan por separado.
+
+## Contrato propuesto
+
+[Formato genérico y ejemplo ficticio](docs/evidence-contract.md). Propuesta documentada; no representa una API implementada.

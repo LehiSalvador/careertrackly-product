@@ -1,0 +1,28 @@
+{
+  "schema_version": "0.1",
+  "profile": {
+    "profile_id": "demo-person",
+    "display_name": "Persona de ejemplo"
+  },
+  "projects": [
+    {
+      "project_id": "demo-project",
+      "title": "Proyecto ficticio de documentación",
+      "summary": "Ejemplo de estructura; no representa trayectoria real.",
+      "evidence": [
+        {
+          "evidence_id": "demo-evidence",
+          "title": "Artefacto de demostración",
+          "kind": "artifact",
+          "source_url": "https://example.com/demo/documentation",
+          "visibility": "public",
+          "skills": [
+            "Python",
+            "Documentación"
+          ],
+          "verification": "author_provided"
+        }
+      ]
+    }
+  ]
+}

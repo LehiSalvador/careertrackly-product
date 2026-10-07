@@ -1,0 +1,122 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "0.1"
+    },
+    "profile": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "profile_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "display_name": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "profile_id",
+        "display_name"
+      ]
+    },
+    "projects": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "project_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1
+          },
+          "summary": {
+            "type": "string",
+            "minLength": 1
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "evidence_id": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "title": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "kind": {
+                  "enum": [
+                    "repository",
+                    "certificate",
+                    "artifact",
+                    "publication"
+                  ]
+                },
+                "source_url": {
+                  "type": "string",
+                  "minLength": 1,
+                  "format": "uri",
+                  "pattern": "^https://[^\\s]+$"
+                },
+                "visibility": {
+                  "const": "public"
+                },
+                "skills": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "minItems": 1,
+                  "uniqueItems": true
+                },
+                "verification": {
+                  "enum": [
+                    "author_provided",
+                    "third_party_verified"
+                  ]
+                }
+              },
+              "required": [
+                "evidence_id",
+                "title",
+                "kind",
+                "source_url",
+                "visibility",
+                "skills",
+                "verification"
+              ]
+            },
+            "minItems": 1
+          }
+        },
+        "required": [
+          "project_id",
+          "title",
+          "summary",
+          "evidence"
+        ]
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "schema_version",
+    "profile",
+    "projects"
+  ],
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Proposed Careertrackly public evidence manifest",
+  "description": "Conceptual V1 proposal, not an implemented product API."
+}
