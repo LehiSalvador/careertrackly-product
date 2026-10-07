@@ -24,3 +24,7 @@ La arquitectura conceptual V1 está ampliamente definida. El desarrollo funciona
 
 - [Portafolio de Lehi Salvador](https://github.com/LehiSalvador)
 - [Salva Systems](https://salvasystems.site)
+
+## Documentación de producto
+
+[Contexto y alcance](docs/overview.md) · [Hoja de ruta pública](docs/roadmap.md)
